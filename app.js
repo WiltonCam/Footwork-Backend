@@ -1,6 +1,6 @@
 const express = require("express") 
 const cors = require("cors");
-
+const footwareControllers = require("./controllers/footwarecontroller.js")
 //CONFIGURATION
 const app = express();
 
@@ -12,5 +12,11 @@ app.use(express.json());
 app.get("/", (req, res) => {
     res.send("Welcome to the Footware App!")
 });
+
+app.use("/footware", footwareControllers);
+
+app.get("*", (req, res) => {
+    res.status(404).send("Page not found");
+})
 
 module.exports = app;
