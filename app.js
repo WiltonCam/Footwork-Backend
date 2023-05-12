@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
     res.send("Welcome to the Footware App!")
 });
 
-app.use("/footware", footwareControllers);
+app.use("/footwares", footwareControllers);
 
 app.get("*", (req, res) => {
     res.status(404).send("Page not found");
