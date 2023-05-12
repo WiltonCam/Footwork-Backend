@@ -3,11 +3,13 @@ CREATE DATABASE footware_dev;
 
 \c footware_dev;
 
-CREATE TABLE footware (
+CREATE TABLE footwares (
     id SERIAL PRIMARY KEY,
+    image TEXT NOT NULL,
     name TEXT NOT NULL,
     cost DECIMAL,
     category TEXT,
     url TEXT,
-    is_Trending BOOLEAN
+    is_trending BOOLEAN
 );
+
