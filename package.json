@@ -17,7 +17,6 @@
     "dev": "nodemon server.js",
     "db:init": "psql -f db/schema.sql",
     "db:seed": "psql -f db/seed.sql"
-
   },
   "repository": {
     "type": "git",
